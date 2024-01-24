@@ -123,7 +123,7 @@ function editTask(task, p){
 
 function deleteTask(li, task){
     task.delete = 'true'
-    task.completed === 'true'?  --counters[0].completeds : --counters[1].pendings
+    task.completed ?  --counters[0].completeds : --counters[1].pendings
     deleteMsg.style.display = "initial"
     confirmBt.addEventListener('click', () => confirmDelete(li))
     attLocalStorage()
@@ -157,7 +157,6 @@ cancelBt.addEventListener('click', () => {
     saveTasks.forEach(task => task.delete = "false")
     counters[0].completeds = countCompleted.textContent
     counters[1].pendings = countPending.textContent
-    confirmBt.removeEventListener()
 
     attLocalStorage()
 })
