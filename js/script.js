@@ -11,7 +11,7 @@ const countCompleted = document.querySelector('.completed__info')
 
 
 let saveTasks = JSON.parse(localStorage.getItem('Task')) || []
-let counters = JSON.parse(localStorage.getItem('counter')) || [{completeds: 0}, {pendings: 0}]
+let counters = JSON.parse(localStorage.getItem('counter')) || [{completeds: 0, pendings: 0}]
 
 function attLocalStorage(){
     localStorage.setItem('Task', JSON.stringify(saveTasks))
@@ -32,7 +32,7 @@ form.addEventListener('submit', (e) => {
     if(input.value){
         const li = createTask(newTask)
         ul.appendChild(li)
-        countPending.textContent = ++counters[1].pendings
+        countPending.textContent = ++counters[0].pendings
         saveTasks.push(newTask)
         attLocalStorage()
     } else {
@@ -106,7 +106,7 @@ saveTasks.forEach(task => {
 
 for(let i = 0; i < counters.length; i++){
     countCompleted.textContent = counters[0].completeds 
-    countPending.textContent = counters[1].pendings
+    countPending.textContent = counters[0].pendings
 } 
 
 function editTask(task, p){
@@ -123,7 +123,7 @@ function editTask(task, p){
 
 function deleteTask(li, task){
     task.delete = 'true'
-    task.completed ?  --counters[0].completeds : --counters[1].pendings
+    task.completed ?  --counters[0].completeds : --counters[0].pendings
     deleteMsg.style.display = "initial"
     confirmBt.addEventListener('click', () => confirmDelete(li))
     attLocalStorage()
@@ -134,7 +134,7 @@ function confirmDelete(li){
     li.remove()
     saveTasks = saveTasks.filter(task => task.delete !== "true" )
     countCompleted.textContent = counters[0].completeds
-    countPending.textContent = counters[1].pendings
+    countPending.textContent = counters[0].pendings
     deleteMsg.style.display = "none"
     attLocalStorage()
 }
@@ -147,7 +147,7 @@ function completeTask(task, li, p, input, editBt){
     li.style.backgroundColor = "yellowgreen"  
     completedList.appendChild(li)
     countCompleted.textContent = ++counters[0].completeds
-    countPending.textContent = --counters[1].pendings
+    countPending.textContent = --counters[0].pendings
     attLocalStorage()
 }
 
@@ -156,7 +156,7 @@ cancelBt.addEventListener('click', () => {
     deleteMsg.style.display = "none"
     saveTasks.forEach(task => task.delete = "false")
     counters[0].completeds = countCompleted.textContent
-    counters[1].pendings = countPending.textContent
+    counters[0].pendings = countPending.textContent
 
     attLocalStorage()
 })
