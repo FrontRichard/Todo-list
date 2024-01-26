@@ -104,10 +104,12 @@ saveTasks.forEach(task => {
     }
 })
 
-counters.forEach(taskInfo => {
-    countCompleted.textContent = taskInfo.completeds 
-    countPending.textContent = taskInfo.pendings
-})
+for(let prop in counters[0]){
+    countCompleted.textContent = counters[0].completeds
+    countPending.textContent = counters[0].pendings
+    console.log(counters[0].completeds);
+    console.log(counters[0].pendings);
+}
 
 function editTask(task, p){
     const newNameTask = prompt('Digite um novo nome para a tarefa')
