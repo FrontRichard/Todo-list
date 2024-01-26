@@ -8,7 +8,7 @@
 
 body{
     min-height: 100vh;
-    background-color: #b7b5b1;
+    background-color: #0D1B2A;
     padding: 1rem 0;
 
     display: flex;
@@ -27,11 +27,11 @@ input[type='checkbox']{
 .title{
     margin-bottom: 1rem;
     text-transform: uppercase;
-    color: black;
+   color:  #E0E1DD;
 }
 
 .container{
-    background-color: #D4C9AD;
+    background-color:#E0E1DD;
     width: 80%;
     max-width: 80%;
     border-radius: 8px;
@@ -46,7 +46,7 @@ input[type='checkbox']{
 }
 
 .todo__container_completeds{
-    background-color: #D4C9AD;
+    background-color:#415A77;
     width: 30%;
     max-width: 80%;
   
@@ -58,7 +58,7 @@ input[type='checkbox']{
 }
 
 .todo__container_count{
-    background-color: #D4C9AD;
+    background-color: #415A77;
     width: 30%;
     max-width: 80%;
   
@@ -71,7 +71,7 @@ input[type='checkbox']{
 
 
 .todo__container{
-    background-color: #D4C9AD;
+    background-color:#0D1B2A;
     width: 80%;
     max-width: 80%;
   
@@ -89,7 +89,7 @@ input[type='checkbox']{
 }
 
 .form{
-    background-color: #C7BA99;
+    background-color: #415A77;
     height: 80px;
     padding: 1rem;
     border-radius: 0 0 20px 20px;
@@ -101,7 +101,7 @@ input[type='checkbox']{
 }
 
 .confirm__delete-msg{
-    color:black;
+    color: #E0E1DD;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,7 +126,7 @@ input[type='checkbox']{
 }
 
 .btns__confirm button:hover{
-    background-color: #C7BA99;
+    background-color:#415A77;
 }
 
 .input__task{
@@ -146,7 +146,7 @@ input[type='checkbox']{
     text-transform: uppercase;
     cursor: pointer;
     transition: .6s;
-    background-color:  #F58723;
+    background-color: #E0E1DD;
 }
 
 .add__task:hover{
@@ -164,7 +164,7 @@ input[type='checkbox']{
 }
 
 .task__item{
-    background-color:  #C7BA99;
+    background-color:  #415A77;
     border-radius: 8px 8px 16px 16px;
     list-style: none;
     padding: .5rem;
@@ -226,8 +226,9 @@ input[type='checkbox']{
 }
 
 .completed__info, .pending__info{
-    background-color:#D4C9AD;
-    box-shadow: 3px 3px 6px;
+    background-color: #0D1B2A;
+    color: #E0E1DD;
+    box-shadow: 0px 0px 6px black;
     border-radius: 8px;
     width: 40%;
 }
