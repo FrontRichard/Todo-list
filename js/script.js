@@ -107,8 +107,6 @@ saveTasks.forEach(task => {
 for(let prop in counters[0]){
     countCompleted.textContent = counters[0].completeds
     countPending.textContent = counters[0].pendings
-    console.log(counters[0].completeds);
-    console.log(counters[0].pendings);
 }
 
 function editTask(task, p){
