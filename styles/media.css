@@ -1,12 +1,11 @@
 @media screen and (min-width: 750px) {
-    .todo__container{
-        max-width: 70%;
-    }
+  .todo__container {
+    max-width: 70%;
+  }
 }
 
 @media screen and (min-width: 900px) {
-    .todo__container{
-        max-width: 40%;
-    }
+  .todo__container {
+    max-width: 40%;
+  }
 }
-
